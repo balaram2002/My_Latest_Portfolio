@@ -1,10 +1,11 @@
 import { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { Send, Mail, MapPin, Linkedin, Github, Instagram, CheckCircle, AlertCircle } from "lucide-react";
+import { Send, Mail, MapPin, Linkedin, Github, Instagram, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import { submitToGoogleSheets } from "@/lib/googleSheets";
 
 const socialLinks = [
   {
@@ -40,28 +41,45 @@ const ContactSection = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission (replace with actual API call later)
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    try {
+      const result = await submitToGoogleSheets(formData);
 
-    setIsSubmitting(false);
-    setSubmitted(true);
-    setFormData({ name: "", email: "", message: "" });
+      if (result.success) {
+        setSubmitted(true);
+        setFormData({ name: "", email: "", message: "" });
 
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for reaching out. I'll get back to you soon!",
-    });
+        toast({
+          title: "Message Sent!",
+          description: "Thank you for reaching out. I'll get back to you soon!",
+        });
 
-    // Reset submitted state after 5 seconds
-    setTimeout(() => setSubmitted(false), 5000);
+        // Reset submitted state after 5 seconds
+        setTimeout(() => setSubmitted(false), 5000);
+      } else {
+        toast({
+          title: "Error",
+          description: result.error || "Failed to send message. Please try again.",
+          variant: "destructive",
+        });
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+      toast({
+        title: "Error",
+        description: "An unexpected error occurred. Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -107,7 +125,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">Email</p>
-                  <p className="text-foreground font-medium">dakhintudu@gmail.com</p>
+                  <p className="text-foreground font-medium">dtudu195@gamil.com</p>
                 </div>
               </motion.div>
 
@@ -235,3 +253,4 @@ const ContactSection = () => {
 };
 
 export default ContactSection;
+

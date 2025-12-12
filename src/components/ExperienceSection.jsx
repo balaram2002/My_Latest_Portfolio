@@ -5,54 +5,48 @@ import { Briefcase, GraduationCap, Award } from "lucide-react";
 const experiences = [
   {
     type: "work",
-    title: "Full-Stack Developer",
-    organization: "Freelance / Personal Projects",
-    period: "2023 - Present",
+    title: "Developer Trainee",
+    organization: "Tatwa Technologies | Bhubaneswar",
+    period: "Dec 2025 – Present",
     description:
-      "Building scalable web applications using React.js and Spring Boot. Developing RESTful APIs, implementing microservices architecture, and creating responsive user interfaces.",
-    skills: ["React.js", "Spring Boot", "REST APIs", "MySQL"],
+      "Developing microservices for the Litigation Management System (orrisalms.in) using Spring Boot and PgSQL. Migrated legacy data to the new database design using a Spring Boot ETL pipeline. Optimized Redis caching to maintain <100 ms API responses and reduce DB load by 50%+. Strengthened RBAC security, JWT handling, and multi-role access flows. Improved service reliability with Eureka, API Gateway, and fault-tolerant routing.",
+    skills: ["Spring Boot", "PostgreSQL", "Redis", "Microservices", "Eureka", "API Gateway", "JWT", "RBAC"],
   },
   {
     type: "work",
-    title: "Web Developer Intern",
-    organization: "Tech Company",
-    period: "2022 - 2023",
+    title: "Developer Intern",
+    organization: "Tatwa Technologies | Bhubaneswar",
+    period: "Sep 2025 – Dec 2025",
     description:
-      "Contributed to frontend development using React.js. Collaborated with senior developers on backend integration and learned industry best practices.",
-    skills: ["React.js", "JavaScript", "Git", "Agile"],
+      "Supported migration of legacy modules into Spring Boot microservices. Assisted with API development, caching setup, authentication flow, and data preparation.",
+    skills: ["Spring Boot", "REST APIs", "Redis", "Authentication", "Data Migration"],
+  },
+  {
+    type: "work",
+    title: "Java Full Stack Developer Intern",
+    organization: "Qspiders",
+    period: "Jan 2025 - Sep 2025",
+    description:
+      "Hands-on training in Java, J2EE, Hibernate, MySQL, Spring Boot. Built full-stack projects using MVC architecture, REST API development, and database integration.",
+    skills: ["Java", "J2EE", "Hibernate", "MySQL", "Spring Boot", "MVC", "REST APIs", "Git", "Maven"],
   },
 ];
 
 const education = [
   {
     type: "education",
-    title: "Bachelor's in Computer Science",
-    organization: "University",
-    period: "2020 - 2024",
+    title: "B.Tech in Computer Science & Engineering",
+    organization: "Hi-Tech Institute of Technology, Bhubaneswar",
+    period: "2021 - 2025",
     description:
-      "Focused on software engineering, data structures, algorithms, and web technologies. Completed multiple projects in Java and web development.",
-    skills: ["Java", "DSA", "DBMS", "Web Development"],
+      "CGPA: 8.34. Focused on software engineering, data structures, algorithms, and web technologies. Completed multiple projects in Java, Spring Boot, and web development.",
+    skills: ["Java", "Data Structures", "Algorithms", "DBMS", "Web Development", "Software Engineering"],
   },
 ];
 
-const certifications = [
-  {
-    type: "certification",
-    title: "Java Programming Certification",
-    organization: "Online Platform",
-    period: "2023",
-    description: "Comprehensive certification covering core Java, OOP concepts, and advanced Java features.",
-  },
-  {
-    type: "certification",
-    title: "React.js Developer Certification",
-    organization: "Online Platform",
-    period: "2023",
-    description: "Advanced React concepts including hooks, context, and state management.",
-  },
-];
+const certifications = [];
 
-const getIcon = (type: string) => {
+const getIcon = (type) => {
   switch (type) {
     case "work":
       return Briefcase;
@@ -65,24 +59,7 @@ const getIcon = (type: string) => {
   }
 };
 
-const TimelineItem = ({
-  item,
-  index,
-  isInView,
-  isLeft,
-}: {
-  item: {
-    type: string;
-    title: string;
-    organization: string;
-    period: string;
-    description: string;
-    skills?: string[];
-  };
-  index: number;
-  isInView: boolean;
-  isLeft: boolean;
-}) => {
+const TimelineItem = ({ item, index, isInView, isLeft }) => {
   const Icon = getIcon(item.type);
 
   return (
@@ -189,3 +166,4 @@ const ExperienceSection = () => {
 };
 
 export default ExperienceSection;
+

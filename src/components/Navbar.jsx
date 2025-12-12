@@ -34,10 +34,12 @@ const Navbar = () => {
     document.documentElement.classList.toggle("dark");
   };
 
-  const scrollToSection = (href: string) => {
+  const scrollToSection = (href) => {
     setIsOpen(false);
     const element = document.querySelector(href);
-    element?.scrollIntoView({ behavior: "smooth" });
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
@@ -136,3 +138,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+

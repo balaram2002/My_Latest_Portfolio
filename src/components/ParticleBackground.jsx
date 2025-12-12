@@ -16,10 +16,11 @@ const ParticleBackground = () => {
   if (!init) return null;
 
   return (
-    <Particles
-      id="tsparticles"
-      className="absolute inset-0 -z-10"
-      options={{
+    <div className="absolute inset-0 w-full z-10 pointer-events-none" style={{ minHeight: '100%' }}>
+      <Particles
+        id="tsparticles"
+        className="absolute inset-0 w-full h-full"
+        options={{
         background: {
           color: {
             value: "transparent",
@@ -53,8 +54,8 @@ const ParticleBackground = () => {
             color: "#3b82f6",
             distance: 150,
             enable: true,
-            opacity: 0.2,
-            width: 1,
+            opacity: 0.3,
+            width: 1.5,
           },
           move: {
             direction: "none",
@@ -63,8 +64,16 @@ const ParticleBackground = () => {
               default: "bounce",
             },
             random: true,
-            speed: 0.8,
+            speed: 2,
             straight: false,
+            attract: {
+              enable: false,
+              rotateX: 600,
+              rotateY: 1200,
+            },
+            trail: {
+              enable: false,
+            },
           },
           number: {
             density: {
@@ -76,12 +85,12 @@ const ParticleBackground = () => {
           },
           opacity: {
             value: {
-              min: 0.1,
-              max: 0.5,
+              min: 0.2,
+              max: 0.6,
             },
             animation: {
               enable: true,
-              speed: 1,
+              speed: 2,
               sync: false,
             },
           },
@@ -90,12 +99,19 @@ const ParticleBackground = () => {
           },
           size: {
             value: { min: 1, max: 3 },
+            animation: {
+              enable: true,
+              speed: 3,
+              sync: false,
+            },
           },
         },
         detectRetina: true,
       }}
-    />
+      />
+    </div>
   );
 };
 
 export default ParticleBackground;
+

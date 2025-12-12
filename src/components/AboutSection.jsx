@@ -5,24 +5,24 @@ import { Code2, Server, Rocket, Lightbulb } from "lucide-react";
 
 const strengths = [
   {
-    icon: Code2,
-    title: "Frontend Expert",
-    description: "Building responsive, interactive UIs with React.js & modern CSS",
-  },
-  {
     icon: Server,
     title: "Backend Specialist",
-    description: "Developing robust APIs with Java Spring Boot & microservices",
+    description: "Building scalable REST APIs and microservices with Spring Boot",
+  },
+  {
+    icon: Code2,
+    title: "Java Expert",
+    description: "Proficient in Core Java, OOP, Collections, Multithreading & Java 8",
   },
   {
     icon: Rocket,
-    title: "Full-Stack Capable",
-    description: "End-to-end development from database to deployment",
+    title: "Performance Optimizer",
+    description: "Optimized Redis caching to maintain <100ms API responses",
   },
   {
     icon: Lightbulb,
-    title: "Problem Solver",
-    description: "Analytical thinking & creative solutions for complex challenges",
+    title: "Microservices Architect",
+    description: "Designing distributed systems with Eureka, API Gateway & Redis",
   },
 ];
 
@@ -57,11 +57,16 @@ const AboutSection = () => {
             {/* Avatar */}
             <div className="relative">
               <motion.div
-                className="w-48 h-48 md:w-64 md:h-64 rounded-2xl glass-card p-2 animate-pulse-glow"
+                className="w-48 h-48 md:w-64 md:h-64 rounded-2xl glass-card p-2 animate-pulse-glow overflow-hidden"
                 whileHover={{ scale: 1.05 }}
               >
-                <div className="w-full h-full rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
-                  <span className="text-6xl md:text-8xl font-bold gradient-text">DT</span>
+                <div className="w-full h-full rounded-xl overflow-hidden">
+                  <img
+                    src="/profile.png"
+                    alt="Dakhin Tudu"
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
                 </div>
               </motion.div>
               {/* Floating decoration */}
@@ -80,19 +85,17 @@ const AboutSection = () => {
             {/* Bio */}
             <div className="text-center lg:text-left space-y-4 max-w-lg">
               <h3 className="text-2xl font-bold text-foreground">
-                Full-Stack Developer
+                Java Spring Boot Developer
               </h3>
               <p className="text-muted-foreground leading-relaxed">
-                I'm a passionate Full-Stack Developer with expertise in Java Spring Boot 
-                and React.js. I love building scalable web applications that solve 
-                real-world problems. With a strong foundation in both frontend and 
-                backend technologies, I create seamless user experiences powered by 
-                robust server-side architectures.
+                Java Spring Boot Developer with hands-on experience in building scalable REST APIs and microservices. 
+                Proficient in Java, Spring Boot, Spring Data JPA, and MySQL/PostgreSQL. Skilled in optimizing backend 
+                performance and building scalable distributed systems.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                When I'm not coding, I'm exploring new technologies, contributing to 
-                open-source projects, and continuously learning to stay ahead in the 
-                ever-evolving tech landscape.
+                Currently working as a Developer Trainee at Tatwa Technologies, developing microservices for the 
+                Litigation Management System. Passionate about building efficient, high-performance backend systems 
+                and continuously learning new technologies.
               </p>
             </div>
           </motion.div>
@@ -132,3 +135,4 @@ const AboutSection = () => {
 };
 
 export default AboutSection;
+

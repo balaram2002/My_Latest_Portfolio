@@ -23,7 +23,10 @@ const socialLinks = [
 
 const HeroSection = () => {
   const scrollToAbout = () => {
-    document.querySelector("#about")?.scrollIntoView({ behavior: "smooth" });
+    const element = document.querySelector("#about");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
@@ -56,7 +59,7 @@ const HeroSection = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.3, duration: 0.5 }}
           >
-            <span className="gradient-text glow-text">Dakhin Tudu</span>
+            <span className="gradient-text glow-text">Daxin Tudu</span>
           </motion.h1>
 
           {/* Typing Animation */}
@@ -122,7 +125,8 @@ const HeroSection = () => {
               asChild
             >
               <a
-                href="https://portfolio-daxin.netlify.app/"
+                href="/resume/Dakhin_Tudu_Resume.pdf"
+                download="Dakhin_Tudu_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -156,3 +160,4 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+

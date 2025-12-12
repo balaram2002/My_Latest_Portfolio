@@ -102,6 +102,8 @@
 @layer components {
   /* Glassmorphism card styles */
   .glass-card {
+    position: relative;
+    z-index: 20;
     @apply relative backdrop-blur-xl rounded-2xl border;
     background: hsl(var(--glass-bg));
     border-color: hsl(var(--glass-border));
@@ -181,6 +183,11 @@
   .section-subtitle {
     @apply text-muted-foreground text-lg md:text-xl max-w-2xl;
   }
+
+  /* Cursor gradient with smooth color transitions */
+  .cursor-gradient {
+    transition: background 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
 
 @layer utilities {
@@ -249,5 +256,104 @@
 
   ::-webkit-scrollbar-thumb:hover {
     background: hsl(var(--electric-blue) / 0.7);
+  }
+
+  /* GitHub Chart Custom Styling */
+  .github-chart-custom {
+    filter: brightness(1.1) contrast(1.1) saturate(1.2);
+    transition: filter 0.3s ease;
+  }
+
+  .github-chart-custom:hover {
+    filter: brightness(1.2) contrast(1.15) saturate(1.3);
+  }
+
+  /* Dark mode GitHub chart enhancement - softer appearance */
+  .dark .github-chart-custom {
+    filter: brightness(0.9) contrast(0.95) saturate(1.1);
+    opacity: 0.95;
+  }
+
+  .dark .github-chart-custom:hover {
+    filter: brightness(0.95) contrast(1) saturate(1.15);
+    opacity: 1;
+  }
+
+  /* GitHub Activity Graph Container - Mobile Scrollable */
+  .github-activity-graph-container {
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: hsl(var(--primary)) hsl(var(--muted)); /* Firefox */
+  }
+
+  .github-activity-graph-container::-webkit-scrollbar {
+    height: 8px; /* Horizontal scrollbar height */
+  }
+
+  .github-activity-graph-container::-webkit-scrollbar-track {
+    background: hsl(var(--muted));
+    border-radius: 4px;
+  }
+
+  .github-activity-graph-container::-webkit-scrollbar-thumb {
+    background: hsl(var(--primary));
+    border-radius: 4px;
+  }
+
+  .github-activity-graph-container::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--primary) / 0.8);
+  }
+
+  /* Instagram Embed Square Styling - Perfect Square */
+  .instagram-square-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: transparent;
+  }
+
+  .instagram-embed-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  /* Scale the embed to show center square portion */
+  .instagram-embed-wrapper > * {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) scale(1.5) !important;
+    transform-origin: center center !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 100% !important;
+  }
+
+  /* Force iframe to be square */
+  .instagram-square-container iframe {
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 100% !important;
+    border: none !important;
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) scale(1.5) !important;
+    transform-origin: center center !important;
+  }
+
+  /* Instagram Post Overlay Styling */
+  .instagram-post-overlay {
+    backdrop-filter: blur(4px);
+    transition: opacity 0.3s ease;
+  }
+
+  .group:hover .instagram-post-overlay {
+    opacity: 1;
   }
 }

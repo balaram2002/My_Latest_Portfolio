@@ -21,9 +21,11 @@ const Footer = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  const scrollToSection = (href: string) => {
+  const scrollToSection = (href) => {
     const element = document.querySelector(href);
-    element?.scrollIntoView({ behavior: "smooth" });
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
@@ -125,3 +127,4 @@ const Footer = () => {
 };
 
 export default Footer;
+

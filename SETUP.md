@@ -27,7 +27,7 @@ Place your CV file in the `public/resume/` directory:
 ```
 public/
   resume/
-    Dakhin_Tudu_Resume.pdf
+    Balaram_Gochhayat_Resume.pdf
 ```
 
 The download button in the Hero section will automatically link to this file.
@@ -155,7 +155,7 @@ VITE_GOOGLE_SHEETS_URL=https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec
 - Check browser console for errors
 
 ### CV Download Not Working
-- Ensure file exists at `public/resume/Dakhin_Tudu_Resume.pdf`
+- Ensure file exists at `public/resume/Balaram_Gochhayat_Resume.pdf`
 - Check file name matches exactly (case-sensitive)
 
 ### GitHub Activity Chart Not Showing

@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { Send, Mail, MapPin, Linkedin, Github, Instagram, CheckCircle } from "lucide-react";
+import { Send, Mail, MapPin, Linkedin, Github, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -11,20 +11,14 @@ const socialLinks = [
   {
     name: "GitHub",
     icon: Github,
-    url: "https://github.com/DakhinTudu",
+    url: "https://github.com/balaram2002",
     color: "hover:text-gray-400",
   },
   {
     name: "LinkedIn",
     icon: Linkedin,
-    url: "https://www.linkedin.com/in/dakhin-tudu-b3550821b/",
+    url: "https://www.linkedin.com/in/balaram2002/",
     color: "hover:text-blue-400",
-  },
-  {
-    name: "Instagram",
-    icon: Instagram,
-    url: "https://www.instagram.com/daxin_tudu/",
-    color: "hover:text-pink-400",
   },
 ];
 
@@ -123,9 +117,8 @@ const ContactSection = () => {
                 <div className="p-3 rounded-lg bg-primary/10">
                   <Mail className="w-5 h-5 text-primary" />
                 </div>
-                <div>
-                  <p className="text-sm text-muted-foreground">Email</p>
-                  <p className="text-foreground font-medium">dtudu195@gamil.com</p>
+                <div>                  <p className="text-sm text-muted-foreground">Email</p>
+                  <p className="text-foreground font-medium">balaramgochhayat2002@gmail.com</p>
                 </div>
               </motion.div>
 

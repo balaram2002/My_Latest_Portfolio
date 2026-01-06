@@ -2,7 +2,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 import { Github, Calendar, TrendingUp, Loader2 } from "lucide-react";
 
-const GITHUB_USERNAME = "DakhinTudu";
+const GITHUB_USERNAME = "balaram2002";
 
 const GitHubActivity = () => {
   const ref = useRef(null);
@@ -144,11 +144,11 @@ const GitHubActivity = () => {
               </div>
               <div>
                 <h3 className="text-xl font-bold text-foreground">Contribution Graph</h3>
-                <p className="text-sm text-muted-foreground">@DakhinTudu</p>
+                <p className="text-sm text-muted-foreground">@balaram2002</p>
               </div>
             </div>
             <motion.a
-              href="https://github.com/DakhinTudu"
+              href="https://github.com/balaram2002"
               target="_blank"
               rel="noopener noreferrer"
               className="text-primary hover:underline flex items-center gap-2"
@@ -164,7 +164,7 @@ const GitHubActivity = () => {
             {/* GitHub Contribution Graph with custom blue color scheme */}
             <div className="min-w-[600px] sm:min-w-0">
               <img
-                src={`https://ghchart.rshah.org/3b82f6/DakhinTudu`}
+                src={`https://ghchart.rshah.org/3b82f6/balaram2002`}
                 alt="GitHub Contribution Chart"
                 className="w-full h-auto rounded-lg github-chart-custom"
                 loading="lazy"

@@ -1,23 +1,18 @@
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
-import { Github, Linkedin, Instagram, Download, ChevronDown } from "lucide-react";
+import { Github, Linkedin, Download, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const socialLinks = [
   {
     name: "GitHub",
     icon: Github,
-    url: "https://github.com/DakhinTudu",
+    url: "https://github.com/balaram2002",
   },
   {
     name: "LinkedIn",
     icon: Linkedin,
-    url: "https://www.linkedin.com/in/dakhin-tudu-b3550821b/",
-  },
-  {
-    name: "Instagram",
-    icon: Instagram,
-    url: "https://www.instagram.com/daxin_tudu/",
+    url: "https://www.linkedin.com/in/balaram2002/",
   },
 ];
 
@@ -59,7 +54,7 @@ const HeroSection = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.3, duration: 0.5 }}
           >
-            <span className="gradient-text glow-text">Daxin Tudu</span>
+            <span className="gradient-text glow-text">Balaram Gochhayat</span>
           </motion.h1>
 
           {/* Typing Animation */}
@@ -125,8 +120,8 @@ const HeroSection = () => {
               asChild
             >
               <a
-                href="/resume/Dakhin_Tudu_Resume.pdf"
-                download="Dakhin_Tudu_Resume.pdf"
+                href="https://drive.google.com/uc?export=download&id=1X7Q8HDZ5h_qP3Ig60xU3oWZR4JryLSyw"
+                download="Balaram_Gochhayat_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
               >

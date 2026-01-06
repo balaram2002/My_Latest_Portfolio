@@ -6,7 +6,7 @@
 - [x] Animated introduction with name
 - [x] Tagline: "Full-Stack Developer | Java & React.js"
 - [x] Social links (LinkedIn, GitHub, Instagram) with hover animations
-- [x] CV download button (links to `/resume/Dakhin_Tudu_Resume.pdf`)
+- [x] CV download button (links to `/resume/Balaram_Gochhayat_Resume.pdf`)
 - [x] Scroll indicator animation
 - [x] Particle background integration
 - [x] Type animation for roles
@@ -135,7 +135,7 @@
 
 ## 🚀 Next Steps
 
-1. **Add your CV**: Place `Dakhin_Tudu_Resume.pdf` in `public/resume/`
+1. **Add your CV**: Place `Balaram_Gochhayat_Resume.pdf` in `public/resume/`
 2. **Set up Google Sheets**: Follow instructions in `SETUP.md`
 3. **Configure Instagram API** (optional): Update `InstagramFeed.tsx`
 4. **Update personal data**: Edit experience/education in `ExperienceSection.tsx`

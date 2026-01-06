@@ -2,15 +2,15 @@ import { useEffect, useState } from "react";
 
 // Section color mapping - punchy vibrant colors
 const sectionColors = {
-  home: { h: 200, s: 100, l: 60 }, // Cyan/Blue
+  home: { h: 166, s: 100, l: 70 }, // Teal
   about: { h: 330, s: 80, l: 65 }, // Pink
   skills: { h: 280, s: 85, l: 65 }, // Purple
-  projects: { h: 30, s: 90, l: 60 }, // Orange
-  experience: { h: 160, s: 75, l: 55 }, // Teal/Green
+  projects: { h: 166, s: 100, l: 70 }, // Teal
+  experience: { h: 166, s: 100, l: 70 }, // Teal
   "github-activity": { h: 220, s: 95, l: 60 }, // Blue
   instagram: { h: 320, s: 85, l: 70 }, // Magenta/Pink
   contact: { h: 270, s: 80, l: 65 }, // Purple
-  default: { h: 217, s: 91, l: 60 }, // Electric Blue (default)
+  default: { h: 166, s: 100, l: 70 }, // Teal (default)
 };
 
 const CursorGradient = () => {

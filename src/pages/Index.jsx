@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import { useState } from "react";
 import ParticleBackground from "@/components/ParticleBackground";
 import CursorGradient from "@/components/CursorGradient";
 import Navbar from "@/components/Navbar";
@@ -11,26 +12,29 @@ import GitHubActivity from "@/components/GitHubActivity";
 import SocialMediaFeed from "@/components/SocialMediaFeed";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import IntroAnimation from "@/components/IntroAnimation";
 
 const Index = () => {
+  const [showIntro, setShowIntro] = useState(true);
+
   return (
     <>
       <Helmet>
         {/* Primary Meta Tags */}
-        <title>Dakhin Tudu | Full-Stack Developer | Java Spring Boot & React.js Expert</title>
+        <title>Balaram Gochhayat | Full-Stack Developer | Java Spring Boot & React.js Expert</title>
         <meta
           name="title"
-          content="Dakhin Tudu | Full-Stack Developer | Java Spring Boot & React.js Expert"
+          content="Balaram Gochhayat | Full-Stack Developer | Java Spring Boot & React.js Expert"
         />
         <meta
           name="description"
-          content="Portfolio of Dakhin Tudu - Full-Stack Developer specializing in Java Spring Boot, React.js, Microservices, and RESTful APIs. Building scalable web applications with modern technologies. 2+ years of experience in backend development and full-stack solutions."
+          content="Portfolio of Balaram Gochhayat - Full-Stack Developer specializing in Java Spring Boot, React.js, Microservices, and RESTful APIs. Building scalable web applications with modern technologies. 2+ years of experience in backend development and full-stack solutions."
         />
         <meta
           name="keywords"
-          content="Dakhin Tudu, Full-Stack Developer, Java Developer, React.js Developer, Spring Boot, Microservices, RESTful APIs, PostgreSQL, Docker, Hibernate, Spring Framework, Backend Developer, Frontend Developer, Web Development, Portfolio, Software Engineer, Java Spring Boot Developer, React Developer, Full Stack Engineer"
+          content="Balaram Gochhayat, Full-Stack Developer, Java Developer, React.js Developer, Spring Boot, Microservices, RESTful APIs, PostgreSQL, Docker, Hibernate, Spring Framework, Backend Developer, Frontend Developer, Web Development, Portfolio, Software Engineer, Java Spring Boot Developer, React Developer, Full Stack Engineer"
         />
-        <meta name="author" content="Dakhin Tudu" />
+        <meta name="author" content="Balaram Gochhayat" />
         <meta name="robots" content="index, follow" />
         <meta name="language" content="English" />
         <meta name="revisit-after" content="7 days" />
@@ -38,33 +42,32 @@ const Index = () => {
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://portfolio-daxin.netlify.app/" />
-        <meta property="og:title" content="Dakhin Tudu | Full-Stack Developer | Java Spring Boot & React.js Expert" />
+        <meta property="og:url" content="https://balaramportfolio.netlify.app/" />
+        <meta property="og:title" content="Balaram Gochhayat | Full-Stack Developer | Java Spring Boot & React.js Expert" />
         <meta
           property="og:description"
           content="Full-Stack Developer specializing in Java Spring Boot, React.js, Microservices, and RESTful APIs. Building scalable web applications with modern technologies."
         />
-        <meta property="og:image" content="https://portfolio-daxin.netlify.app/profile.png" />
+        <meta property="og:image" content="https://balaramportfolio.netlify.app/profile.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:site_name" content="Dakhin Tudu Portfolio" />
+        <meta property="og:site_name" content="Balaram Gochhayat Portfolio" />
         <meta property="og:locale" content="en_US" />
         
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content="https://portfolio-daxin.netlify.app/" />
-        <meta name="twitter:title" content="Dakhin Tudu | Full-Stack Developer | Java Spring Boot & React.js Expert" />
+        <meta name="twitter:url" content="https://balaramportfolio.netlify.app/" />
+        <meta name="twitter:title" content="Balaram Gochhayat | Full-Stack Developer | Java Spring Boot & React.js Expert" />
         <meta
           name="twitter:description"
           content="Full-Stack Developer specializing in Java Spring Boot, React.js, Microservices, and RESTful APIs."
         />
-        <meta name="twitter:image" content="https://portfolio-daxin.netlify.app/profile.png" />
-        <meta name="twitter:creator" content="@dakhin_tudu" />
+        <meta name="twitter:image" content="https://balaramportfolio.netlify.app/profile.png" />
         
         {/* Additional SEO */}
         <meta name="theme-color" content="#3b82f6" />
         <meta name="msapplication-TileColor" content="#3b82f6" />
-        <link rel="canonical" href="https://portfolio-daxin.netlify.app/" />
+        <link rel="canonical" href="https://balaramportfolio.netlify.app/" />
         
         {/* Favicon */}
         <link rel="icon" type="image/png" href="/profile.png" />
@@ -78,13 +81,12 @@ const Index = () => {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Person",
-              "name": "Dakhin Tudu",
+              "name": "Balaram Gochhayat",
               "jobTitle": "Full-Stack Developer",
-              "url": "https://portfolio-daxin.netlify.app/",
+              "url": "https://balaramportfolio.netlify.app/",
               "sameAs": [
-                "https://github.com/DakhinTudu",
-                "https://www.linkedin.com/in/dakhin-tudu-b3550821b/",
-                "https://www.instagram.com/daxin_tudu/"
+                "https://github.com/balaram2002",
+                "https://www.linkedin.com/in/balaram2002/"
               ],
               "knowsAbout": [
                 "Java",
@@ -96,7 +98,7 @@ const Index = () => {
                 "Microservices",
                 "RESTful APIs"
               ],
-              "email": "dtudu195@gamil.com",
+              "email": "balaramgochhayat2002@gmail.com",
               "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Bhubaneswar",
@@ -106,6 +108,8 @@ const Index = () => {
           }}
         />
       </Helmet>
+
+      {showIntro && <IntroAnimation onComplete={() => setShowIntro(false)} />}
 
       <div className="relative min-h-screen bg-background overflow-x-hidden">
         {/* Particle Background - Scrolls with page content */}
@@ -118,7 +122,7 @@ const Index = () => {
         <Navbar />
 
         {/* Main Content */}
-        <main>
+        <main className="relative z-10">
           <HeroSection />
           <AboutSection />
           <SkillsSection />

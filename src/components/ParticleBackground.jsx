@@ -4,19 +4,41 @@ import { loadSlim } from "@tsparticles/slim";
 
 const ParticleBackground = () => {
   const [init, setInit] = useState(false);
+  const [isDark, setIsDark] = useState(true);
 
   useEffect(() => {
+    // Check initial theme
+    setIsDark(document.documentElement.classList.contains("dark"));
+
+    // Watch for theme changes
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.attributeName === "class") {
+          setIsDark(document.documentElement.classList.contains("dark"));
+        }
+      });
+    });
+
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+
     initParticlesEngine(async (engine) => {
       await loadSlim(engine);
     }).then(() => {
       setInit(true);
     });
+
+    return () => observer.disconnect();
   }, []);
 
   if (!init) return null;
 
+  const particleColor = isDark ? "#64ffda" : "#2563EB";
+
   return (
-    <div className="absolute inset-0 w-full z-10 pointer-events-none" style={{ minHeight: '100%' }}>
+    <div className="absolute inset-0 w-full z-0 pointer-events-none" style={{ minHeight: '100%' }}>
       <Particles
         id="tsparticles"
         className="absolute inset-0 w-full h-full"
@@ -48,10 +70,10 @@ const ParticleBackground = () => {
         },
         particles: {
           color: {
-            value: "#3b82f6",
+            value: particleColor,
           },
           links: {
-            color: "#3b82f6",
+            color: particleColor,
             distance: 150,
             enable: true,
             opacity: 0.3,

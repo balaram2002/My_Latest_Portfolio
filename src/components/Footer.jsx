@@ -1,10 +1,9 @@
 import { motion } from "framer-motion";
-import { Github, Linkedin, Instagram, Heart, ArrowUp } from "lucide-react";
+import { Github, Linkedin, Heart, ArrowUp } from "lucide-react";
 
 const socialLinks = [
-  { name: "GitHub", icon: Github, url: "https://github.com/DakhinTudu" },
-  { name: "LinkedIn", icon: Linkedin, url: "https://www.linkedin.com/in/dakhin-tudu-b3550821b/" },
-  { name: "Instagram", icon: Instagram, url: "https://www.instagram.com/daxin_tudu/" },
+  { name: "GitHub", icon: Github, url: "https://github.com/balaram2002" },
+  { name: "LinkedIn", icon: Linkedin, url: "https://www.linkedin.com/in/balaram2002/" },
 ];
 
 const navLinks = [
@@ -43,7 +42,7 @@ const Footer = () => {
             viewport={{ once: true }}
           >
             <a href="#home" className="text-2xl font-bold gradient-text inline-block">
-              {"<DT />"}
+              {"<BG />"}
             </a>
             <p className="text-sm text-muted-foreground">
               Full-Stack Developer crafting digital experiences
@@ -104,7 +103,7 @@ const Footer = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
           >
-            © {new Date().getFullYear()} Dakhin Tudu. Made with{" "}
+            © {new Date().getFullYear()} Balaram Gochhayat. Made with{" "}
             <Heart className="w-4 h-4 text-red-500 fill-red-500" /> in India
           </motion.p>
 

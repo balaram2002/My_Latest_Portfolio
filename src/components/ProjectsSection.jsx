@@ -29,7 +29,7 @@ const ProjectsSection = () => {
         // Use GraphQL API to get pinned repositories
         const query = `
           query {
-            user(login: "DakhinTudu") {
+            user(login: "balaram2002") {
               pinnedItems(first: 6, types: REPOSITORY) {
                 nodes {
                   ... on Repository {
@@ -64,7 +64,7 @@ const ProjectsSection = () => {
         // GraphQL API often requires authentication, so let's use REST API directly
         // which is more reliable for public repos
         const response = await fetch(
-          "https://api.github.com/users/DakhinTudu/repos?sort=updated&per_page=30&type=all"
+          "https://api.github.com/users/balaram2002/repos?sort=updated&per_page=30&type=all"
         );
 
         if (!response.ok) {
@@ -154,7 +154,7 @@ const ProjectsSection = () => {
               className={`relative z-10 px-6 sm:px-8 py-2.5 sm:py-3 rounded-full font-semibold text-sm sm:text-base transition-colors min-w-[80px] sm:min-w-[100px] ${
                 activeTab === "clients"
                   ? "text-primary"
-                  : "text-white dark:text-gray-200"
+                  : "text-muted-foreground dark:text-gray-200"
               }`}
             >
               Client
@@ -164,7 +164,7 @@ const ProjectsSection = () => {
               className={`relative z-10 px-6 sm:px-8 py-2.5 sm:py-3 rounded-full font-semibold text-sm sm:text-base transition-colors min-w-[80px] sm:min-w-[100px] ${
                 activeTab === "personal"
                   ? "text-primary"
-                  : "text-white dark:text-gray-200"
+                  : "text-muted-foreground dark:text-gray-200"
               }`}
             >
               Personal
@@ -267,9 +267,9 @@ const ProjectsSection = () => {
                         // Retry fetching
                         const fetchPinnedRepos = async () => {
                           try {
-                            const fallbackResponse = await fetch(
-                              "https://api.github.com/users/DakhinTudu/repos?sort=updated&per_page=30"
-                            );
+                          const fallbackResponse = await fetch(
+                            "https://api.github.com/users/balaram2002/repos?sort=updated&per_page=30"
+                          );
                             const fallbackData = await fallbackResponse.json();
                             
                             const sortedRepos = fallbackData
@@ -428,7 +428,7 @@ const ProjectsSection = () => {
                     asChild
                   >
                     <a
-                      href="https://github.com/DakhinTudu?tab=repositories"
+                      href="https://github.com/balaram2002?tab=repositories"
                       target="_blank"
                       rel="noopener noreferrer"
                     >

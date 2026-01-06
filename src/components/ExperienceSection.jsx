@@ -5,7 +5,7 @@ import { Briefcase, GraduationCap, Award } from "lucide-react";
 const experiences = [
   {
     type: "work",
-    title: "Developer Trainee",
+    title: "Software Developer",
     organization: "Tatwa Technologies | Bhubaneswar",
     period: "Dec 2025 – Present",
     description:
@@ -14,7 +14,7 @@ const experiences = [
   },
   {
     type: "work",
-    title: "Developer Intern",
+    title: "Java Developer Trainee",
     organization: "Tatwa Technologies | Bhubaneswar",
     period: "Sep 2025 – Dec 2025",
     description:
@@ -24,7 +24,7 @@ const experiences = [
   {
     type: "work",
     title: "Java Full Stack Developer Intern",
-    organization: "Qspiders",
+    organization: "Upskalor Technologies | Bhubaneswar",
     period: "Jan 2025 - Sep 2025",
     description:
       "Hands-on training in Java, J2EE, Hibernate, MySQL, Spring Boot. Built full-stack projects using MVC architecture, REST API development, and database integration.",
@@ -35,16 +35,35 @@ const experiences = [
 const education = [
   {
     type: "education",
-    title: "B.Tech in Computer Science & Engineering",
-    organization: "Hi-Tech Institute of Technology, Bhubaneswar",
-    period: "2021 - 2025",
+    title: "Master of Computer Applications (MCA)",
+    organization: "Gandhi Institute for Technology (GIFT), Bhubaneswar",
+    period: "Sep 2023 – May 2025",
     description:
-      "CGPA: 8.34. Focused on software engineering, data structures, algorithms, and web technologies. Completed multiple projects in Java, Spring Boot, and web development.",
-    skills: ["Java", "Data Structures", "Algorithms", "DBMS", "Web Development", "Software Engineering"],
+      "Completed MCA with focus on software development, and web technologies. Aggregate: 75%.",
+    skills: ["Java", "Algorithms", "Web Technologies", "Software Development"],
+  },
+  {
+    type: "education",
+    title: "Bachelor of Science (B.Sc)",
+    organization: "Om Shanti College, Kendrapara, Odisha",
+    period: "Jul 2019 – May 2022",
+    description: "Aggregate: 81%.",
+    skills: ["Mathematics", "Computer Science", "Problem Solving"],
   },
 ];
 
-const certifications = [];
+const certifications = [
+
+  {
+    type: "certification",
+    title: "Merit Certificate",
+    organization: "College SIP 2024",
+    period: "2024",
+    description:
+      "Secured 1st position in the Summer Internship Program (SIP) 2024.",
+    skills: ["Achievement"],
+  },
+];
 
 const getIcon = (type) => {
   switch (type) {

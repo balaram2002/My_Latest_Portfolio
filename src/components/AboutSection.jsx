@@ -49,41 +49,67 @@ const AboutSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Avatar & Info */}
           <motion.div
-            className="flex flex-col items-center lg:items-start space-y-6"
+            className="flex flex-col items-center space-y-6"
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             {/* Avatar */}
-            <div className="relative">
+            <div className="relative group">
+              {/* Animated Gradient Border */}
               <motion.div
-                className="w-48 h-48 md:w-64 md:h-64 rounded-2xl glass-card p-2 animate-pulse-glow overflow-hidden"
+                className="absolute -inset-1 rounded-full opacity-75 blur-md bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600"
+                animate={{
+                  rotate: [0, 360],
+                  scale: [1, 1.05, 1],
+                }}
+                transition={{
+                  rotate: { duration: 8, repeat: Infinity, ease: "linear" },
+                  scale: { duration: 3, repeat: Infinity, ease: "easeInOut" },
+                }}
+              />
+              
+              {/* Profile Image Container */}
+              <motion.div
+                className="relative w-48 h-48 md:w-64 md:h-64 rounded-full p-[4px] bg-background overflow-hidden"
                 whileHover={{ scale: 1.05 }}
               >
-                <div className="w-full h-full rounded-xl overflow-hidden">
+                {/* Inner Gradient Ring */}
+                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 animate-spin-slow" />
+                
+                {/* Image Wrapper */}
+                <div className="absolute inset-[4px] rounded-full overflow-hidden bg-background">
                   <img
                     src="/profile.png"
-                    alt="Dakhin Tudu"
-                    className="w-full h-full object-cover"
-                    loading="lazy"
+                    alt="Balaram Gochhayat"
+                    className="w-full h-full object-cover object-center"
+                    loading="eager"
+                    decoding="async"
+                    fetchpriority="high"
                   />
                 </div>
               </motion.div>
-              {/* Floating decoration */}
+
+              {/* Floating Decoration Particles */}
               <motion.div
-                className="absolute -top-4 -right-4 w-8 h-8 bg-primary rounded-lg"
-                animate={{ y: [0, -10, 0], rotate: [0, 180, 360] }}
-                transition={{ duration: 4, repeat: Infinity }}
+                className="absolute -top-6 -right-6 w-3 h-3 bg-purple-500 rounded-full blur-sm"
+                animate={{ y: [0, -15, 0], opacity: [0, 1, 0] }}
+                transition={{ duration: 3, repeat: Infinity, delay: 0.5 }}
               />
               <motion.div
-                className="absolute -bottom-4 -left-4 w-6 h-6 bg-primary/50 rounded-full"
-                animate={{ y: [0, 10, 0] }}
-                transition={{ duration: 3, repeat: Infinity, delay: 0.5 }}
+                className="absolute top-1/2 -left-8 w-2 h-2 bg-pink-500 rounded-full blur-sm"
+                animate={{ x: [0, -10, 0], opacity: [0, 1, 0] }}
+                transition={{ duration: 4, repeat: Infinity, delay: 1 }}
+              />
+              <motion.div
+                className="absolute -bottom-4 right-10 w-2 h-2 bg-blue-500 rounded-full blur-sm"
+                animate={{ y: [0, 10, 0], opacity: [0, 1, 0] }}
+                transition={{ duration: 2.5, repeat: Infinity, delay: 1.5 }}
               />
             </div>
 
             {/* Bio */}
-            <div className="text-center lg:text-left space-y-4 max-w-lg">
+            <div className="text-center space-y-4 max-w-lg">
               <h3 className="text-2xl font-bold text-foreground">
                 Java Spring Boot Developer
               </h3>
@@ -93,7 +119,7 @@ const AboutSection = () => {
                 performance and building scalable distributed systems.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                Currently working as a Developer Trainee at Tatwa Technologies, developing microservices for the 
+                Currently working as a Software Developer at Tatwa Technologies, developing microservices for the 
                 Litigation Management System. Passionate about building efficient, high-performance backend systems 
                 and continuously learning new technologies.
               </p>

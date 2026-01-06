@@ -1,0 +1,46 @@
+{
+  "hash": "f6ff46fb",
+  "configHash": "f27196d8",
+  "lockfileHash": "a0dbcde4",
+  "browserHash": "bbcfe892",
+  "optimized": {
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "0ec93d4b",
+      "needsInterop": true
+    },
+    "react-router-dom": {
+      "src": "../../node_modules/react-router-dom/dist/index.js",
+      "file": "react-router-dom.js",
+      "fileHash": "f7d3e213",
+      "needsInterop": false
+    },
+    "@tanstack/react-query": {
+      "src": "../../node_modules/@tanstack/react-query/build/modern/index.js",
+      "file": "@tanstack_react-query.js",
+      "fileHash": "a063b9a1",
+      "needsInterop": false
+    },
+    "react-helmet-async": {
+      "src": "../../node_modules/react-helmet-async/lib/index.esm.js",
+      "file": "react-helmet-async.js",
+      "fileHash": "4b353084",
+      "needsInterop": false
+    },
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "9d16ef42",
+      "needsInterop": true
+    }
+  },
+  "chunks": {
+    "chunk-4ZQFE4M7": {
+      "file": "chunk-4ZQFE4M7.js"
+    },
+    "chunk-FX5G25LE": {
+      "file": "chunk-FX5G25LE.js"
+    }
+  }
+}

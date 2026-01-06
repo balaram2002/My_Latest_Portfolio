@@ -80,7 +80,7 @@ const AboutSection = () => {
                 {/* Image Wrapper */}
                 <div className="absolute inset-[4px] rounded-full overflow-hidden bg-background">
                   <img
-                    src="/profile.png"
+                    src="./profile.png"
                     alt="Balaram Gochhayat"
                     className="w-full h-full object-cover object-center"
                     loading="eager"

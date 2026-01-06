@@ -48,7 +48,7 @@ const Index = () => {
           property="og:description"
           content="Full-Stack Developer specializing in Java Spring Boot, React.js, Microservices, and RESTful APIs. Building scalable web applications with modern technologies."
         />
-        <meta property="og:image" content="https://balaramportfolio.netlify.app/profile.png" />
+        <meta property="og:image" content="https://balaram2002.github.io/My_Latest_Portfolio/profile.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:site_name" content="Balaram Gochhayat Portfolio" />
@@ -56,23 +56,23 @@ const Index = () => {
         
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content="https://balaramportfolio.netlify.app/" />
+        <meta name="twitter:url" content="https://balaram2002.github.io/My_Latest_Portfolio/" />
         <meta name="twitter:title" content="Balaram Gochhayat | Full-Stack Developer | Java Spring Boot & React.js Expert" />
         <meta
           name="twitter:description"
           content="Full-Stack Developer specializing in Java Spring Boot, React.js, Microservices, and RESTful APIs."
         />
-        <meta name="twitter:image" content="https://balaramportfolio.netlify.app/profile.png" />
+        <meta name="twitter:image" content="https://balaram2002.github.io/My_Latest_Portfolio/profile.png" />
         
         {/* Additional SEO */}
         <meta name="theme-color" content="#3b82f6" />
         <meta name="msapplication-TileColor" content="#3b82f6" />
-        <link rel="canonical" href="https://balaramportfolio.netlify.app/" />
+        <link rel="canonical" href="https://balaram2002.github.io/My_Latest_Portfolio/" />
         
         {/* Favicon */}
-        <link rel="icon" type="image/png" href="/profile.png" />
-        <link rel="apple-touch-icon" href="/profile.png" />
-        <link rel="shortcut icon" href="/profile.png" />
+        <link rel="icon" type="image/png" href="./profile.png" />
+        <link rel="apple-touch-icon" href="./profile.png" />
+        <link rel="shortcut icon" href="./profile.png" />
         
         {/* Structured Data (JSON-LD) */}
         <script

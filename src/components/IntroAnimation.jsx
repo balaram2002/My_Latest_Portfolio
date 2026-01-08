@@ -133,7 +133,7 @@ const IntroAnimation = ({ onComplete }) => {
             <motion.div
               className="absolute inset-0 rounded-full blur-3xl"
               animate={{ scale: [1, 1.3, 1], opacity: [0.1, 0.25, 0.1] }}
-              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
               style={{
                 background:
                   "radial-gradient(circle, rgba(59,130,246,0.15) 0%, rgba(168,85,247,0.1) 60%, transparent 70%)",
